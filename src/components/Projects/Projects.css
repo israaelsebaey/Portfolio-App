@@ -1,0 +1,218 @@
+:root{
+    --shadow:6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(0, 0, 0, 0.326);
+    --sadowInset:inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(0,0,0,0.7),
+    -0.5px -0.5px 0px rgba(0,0,0,1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.05);
+    --bg:-webkit-linear-gradient(left,#942f71,#5f50bc);
+}
+.projects{
+    background-color: #1a1724;
+    box-shadow:var(--shadow)
+}
+.projects .intro{
+    width: 50%;
+    margin: auto;
+}
+.projects .btn{
+    width: 120px;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.projects .btn-first{
+    border-radius: 20px 0 0 20px;
+}
+.projects .btn-last{
+    border-radius: 0 20px 20px 0;
+}
+.projects .btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg);
+    transition: 0.5s;
+    z-index: -1;
+}
+.projects .btn:focus::after{
+    width: 100%;
+    height: 100%;
+}
+.projects .btn-last::after{
+    border-radius: 0 20px 20px 0;
+}
+.projects .btn-last:focus::after{
+    border-radius: 0 20px 20px 0;
+}
+.projects .btn:hover{
+    color: #fff;
+    border: 1px solid #fff;
+}
+.pactive{
+    background:var(--bg);
+}
+.projContainer{
+    height: 270px;
+    width: 360px;
+    margin-top: 50px;
+}
+.projList .projImg{
+    height:100%;
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    z-index: 2;
+    transition: 0.5s;
+}
+.projList .projImg img{
+   width: 100%;
+   height: 100%;
+   border-radius: 30px;
+   transition: 0.2s;
+}
+.projList .projImg::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(1);
+    background-color: #1a172463;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.projList .projImg:hover::after{
+    transform: scale(0);
+}
+.projList .projImg img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.projinfo{
+    box-shadow: var(--shadow);
+    box-shadow:var(--sadowInset);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #1a1724;
+}
+.projContainer .links{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+.projContainer .icons{
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.5s;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #1a1724;
+    transform: translateY(-150px);
+    opacity: 0;
+}
+.projContainer:hover .icons{
+    opacity: 1;
+}
+.projContainer .icons:hover{
+    opacity: 0.7;
+    transition-delay: 0;
+    box-shadow: 0 0 10px #1a1724a7;
+}
+.projContainer .ln{
+    transition-delay: 0.1s;
+}
+.projContainer .gt{
+    transition-delay: 0.3s;
+}
+.projContainer:hover .ln{
+    transform: translateY(0);
+}
+.projContainer:hover .gt{
+    transform: translateY(0);
+}
+@media (max-width:1200px){
+    .projects .intro{
+        width: 55%;
+    } 
+}
+@media (max-width:992px){
+    .projects .intro{
+        width: 75%;
+    } 
+    .projContainer{
+        width: 400px;
+        height: 270px;
+    }
+}
+@media (max-width:768px){
+    .projects .intro{
+        width: 100%;
+    } 
+}
+@media (max-width:640px){
+    .projects .myProj{
+        flex-wrap: wrap;
+    }
+    .projects .btn-first{
+        border-radius: 0;
+    }
+    .projects .btn-last{
+        border-radius:0;
+    }
+}
+@media (max-width:555px){
+    .projects .intro p{
+       font-size: 14px !important;
+    } 
+}
+@media (max-width:500px) {
+    .projects .btn{
+        width: 100px;
+    }   
+}
+@media (max-width:450px) {
+    .projContainer{
+        width: 350px;
+    }
+}
+@media (max-width:382px){
+    .projContainer{
+        width: 300px;
+    }
+}
+@media (max-width:340px){
+    .projContainer{
+        width: 280px;
+        height: 200px;
+    }
+}
+@media (max-width:310px){
+    .projContainer{
+        width: 250px;
+        height: 200px;
+    }
+}
+@media (max-width:280px){
+    .projects .intro p{
+       font-size: 11px !important;
+    } 
+}

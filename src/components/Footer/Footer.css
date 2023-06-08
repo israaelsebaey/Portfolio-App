@@ -1,0 +1,34 @@
+.footer{
+    background-color: #1a1724;
+    margin-top: -180px;
+    z-index: 1;
+    height: 320px;
+}
+.footer .container{
+    margin-top: 220px;
+}
+.copy-rights{
+    margin-bottom: 20px;
+}
+@media (max-width:768px) {
+    .footer{
+        height: 360px;
+    }
+    .social-media,.copy-rights{
+        display: flex;
+        justify-content: start !important;
+    }
+    .footer .social-media a:first-of-type{
+        margin-left: 0;
+    }
+}
+@media (max-width:310px){
+    .copy-rights p{
+        font-size: 14px;
+    }
+}
+@media (max-width:280px){
+    .copy-rights p{
+        font-size: 14px;
+    }
+}

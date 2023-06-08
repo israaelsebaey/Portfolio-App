@@ -1,0 +1,143 @@
+.skills{
+    background-color:#221f2c;
+    border-radius: 20px;
+    height: 420px;
+}
+.skills p{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.slick-dots li button{
+    display: none;
+}
+.skills .outer{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.15)
+}
+.skills .inner{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color:#221f2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(0,0,0,0.7),
+    -0.5px -0.5px 0px rgba(0,0,0,1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.05)
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+}
+.skillSvg{
+    position: absolute;
+    top:0;
+    left: 25;  
+}
+.skills-slider{
+    width: 75%;
+} 
+#cr1{
+    stroke-dashoffset: 110;
+}
+#cr2{
+    stroke-dashoffset: 120;
+}
+#cr3{
+    stroke-dashoffset: 100;
+}
+#cr4{
+    stroke-dashoffset: 100;
+}
+#cr5{
+    stroke-dashoffset: 80;
+}
+.slick-prev:before, .slick-next:before{
+ font-size: 40px;
+}
+.slick-prev, .slick-next{
+ top: 35%;
+}
+.slick-next{
+    right: 10px;
+}
+.slick-prev {
+    left: -15px;
+}
+@media (max-width:1200px) {
+    .slick-next{
+        right: -15px;
+    }
+    .slick-prev {
+        left: -35px;
+    }
+}
+@media (max-width:1024px) {
+    .slick-next{
+        right: 10px;
+    }
+    .slick-prev {
+        left: -10px;
+    }
+}
+@media (width= 768px){
+    .slick-next{
+        right: 50px;
+    }
+    .slick-prev {
+        left: 40px;
+    }
+}
+@media (max-width: 768px){
+    .skills{
+        height: 400px;
+    }
+}
+@media (max-width:580px) {
+    .skills{
+        width: 90% !important;
+    }  
+}
+@media (max-width:540px) {
+    .slick-next{
+        right: -25px;
+    }
+    .slick-prev {
+        left: -40px;
+    }
+}
+@media (max-width:450px) {
+    .skills{
+        height: 380px;
+    }
+}
+@media (max-width:350px) {
+    .skills-slider{
+        width: 100%;
+    }
+    .slick-prev:before, .slick-next:before{
+      font-size: 30px;
+    }
+    .slick-next{
+        right: -10px;
+    }
+    .slick-prev {
+        left: -22px;
+    }
+}
+@media (max-width:280px){
+   .skills-slider {
+      width: 100% !important;
+   }
+}
+
